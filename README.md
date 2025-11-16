@@ -114,7 +114,7 @@ TechTrack
 │  │  └─ ApiContext.jsx
 │  ├─ main.jsx
 │  ├─ pages
-│  │  ├─ Companies
+│  │  ├─ companies
 │  │  │  ├─ Compmain.jsx
 │  │  │  └─ Filter.jsx
 │  │  ├─ home
