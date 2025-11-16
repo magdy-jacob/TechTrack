@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Filter from './Filter.jsx';
-import Card from "../../componants/ui/Card";
+import Card from "../../componants/ui/Card.jsx";
 
 const Companies = () => {
   const cardsPerPage = 6; //
