@@ -4,7 +4,7 @@
 // import QuestionsList from "../TrackDetails/QuestionsList/QuestionsList";
 // import VideoWithModal from "./VideoModal";
 // import RoadmapSection from "./RoadmapLine";
-// import { Btn } from "../../../componants/ui/Btn";
+// import { Btn } from "../../../Components/ui/Btn";
 
 // export default function SubSubTrackDetails() {
 //   const { slug, subSlug, subSubSlug } = useParams();
@@ -22,7 +22,6 @@
 //         const response = await axios.get(
 //           "http://techtrack.runasp.net/api/Roadmap"
 //         );
-
 
 //         // Format URL slug for matching
 //         const formattedSlug = subSubSlug?.replace(/-/g, " ").toLowerCase();
@@ -67,8 +66,6 @@
 //           </p>
 //         </div>
 
-
-
 //         {/* === VIDEO SECTION WITH MODAL === */}
 //         <VideoWithModal
 //           title={title}
@@ -104,7 +101,6 @@ import RoadmapSection from "./RoadmapLine";
 import QuestionsList from "../TrackDetails/QuestionsList/QuestionsList";
 import { useApi } from "../../../context/ApiContext";
 
-
 export default function SubSubTrackDetails() {
   const { trackId, categoryId, subCategoryId } = useParams();
   const baseUrl = "http://techtrack.runasp.net/api";
@@ -136,11 +132,9 @@ export default function SubSubTrackDetails() {
   useEffect(() => {
     const fetchTechnologiesForTrack = async () => {
       try {
-
         const res = await getTechnologies();
         const allTech = res.data.data || res.data;
-        const trackTechnologies = allTech.filter(tech => {
-
+        const trackTechnologies = allTech.filter((tech) => {
           return tech.trackId === parseInt(trackId);
         });
         setTechnologies(trackTechnologies);
@@ -171,7 +165,7 @@ export default function SubSubTrackDetails() {
         const res = await axios.get(`${baseUrl}/Roadmap`);
         const data = res.data.data || res.data;
         const matched = data.find(
-          r => r.subCategoryId === parseInt(subCategoryId)
+          (r) => r.subCategoryId === parseInt(subCategoryId)
         );
         setRoadmap(matched || null);
       } catch (err) {
@@ -190,7 +184,9 @@ export default function SubSubTrackDetails() {
   useEffect(() => {
     const getCategoryName = async () => {
       try {
-        const res = await fetch(`http://techtrack.runasp.net/api/Category/${categoryId}`);
+        const res = await fetch(
+          `http://techtrack.runasp.net/api/Category/${categoryId}`
+        );
         const data = await res.json();
         if (data && data.data && data.data.categoryName) {
           setCategoryName(data.data.categoryName);
@@ -205,7 +201,9 @@ export default function SubSubTrackDetails() {
   useEffect(() => {
     const getSubCategoryId = async () => {
       try {
-        const res = await fetch(`http://techtrack.runasp.net/api/SubCategory/${subCategoryId}`);
+        const res = await fetch(
+          `http://techtrack.runasp.net/api/SubCategory/${subCategoryId}`
+        );
         const data = await res.json();
         if (data && data.data && data.data.subCategoryName) {
           setSubCategoryName(data.data.subCategoryName);
@@ -221,7 +219,6 @@ export default function SubSubTrackDetails() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-light to-white text-text flex flex-col">
       <main className="flex-1 container mx-auto px-6 mt-20 py-16 md:py-24 text-left space-y-12">
-
         {/* ===== Header ===== */}
         <div className="max-w-5xl mx-auto space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold text-secondary border-l-6 border-primary pl-4 capitalize">
@@ -230,22 +227,33 @@ export default function SubSubTrackDetails() {
           <p>{track?.description}</p>
           <div className="flex flex-col md:flex-row gap-2 md:justify-start md:items-center pb-2">
             <div className="flex gap-2 justify-start items-center">
-              <Link to={"/roadmap/"} className="text-[12px] md:text-[15px] text-gray-400">
+              <Link
+                to={"/roadmap/"}
+                className="text-[12px] md:text-[15px] text-gray-400"
+              >
                 Roadmaps
               </Link>
               /
-              <Link to={`/roadmap/${categoryId}`} className="text-[12px] md:text-[15px] text-gray-400">
+              <Link
+                to={`/roadmap/${categoryId}`}
+                className="text-[12px] md:text-[15px] text-gray-400"
+              >
                 {categoryName}
               </Link>
               /
-              <Link to={`/roadmap/${categoryId}/${subCategoryId}`} className="text-[12px] md:text-[15px] text-gray-400">
+              <Link
+                to={`/roadmap/${categoryId}/${subCategoryId}`}
+                className="text-[12px] md:text-[15px] text-gray-400"
+              >
                 {subCategoryName}
               </Link>
             </div>
             <div className="flex gap-2 justify-start items-center">
-
               /
-              <Link to={`/roadmap/${categoryId}/${subCategoryId}/${subCategoryId}`} className="text-[12px] md:text-[15px] text-secondary">
+              <Link
+                to={`/roadmap/${categoryId}/${subCategoryId}/${subCategoryId}`}
+                className="text-[12px] md:text-[15px] text-secondary"
+              >
                 {track?.trackName || "Track Details"}
               </Link>
             </div>
@@ -254,14 +262,15 @@ export default function SubSubTrackDetails() {
 
         {/* ===== Buttons for Technologies ===== */}
         <div className="flex justify-center gap-4 flex-wrap mb-8">
-          {technologies.map(tech => (
+          {technologies.map((tech) => (
             <button
               key={tech.technologyId}
               onClick={() => handleTechClick(tech)}
-              className={`px-4 py-2 rounded-full font-bold cursor-pointer transition duration-300 ${activeTech?.technologyId === tech.technologyId
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                }`}
+              className={`px-4 py-2 rounded-full font-bold cursor-pointer transition duration-300 ${
+                activeTech?.technologyId === tech.technologyId
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
             >
               {tech.technologyName}
             </button>
@@ -283,7 +292,6 @@ export default function SubSubTrackDetails() {
           title={activeTech?.name || ""}
           description={activeTech?.description || ""}
         />
-
       </main>
 
       {/* ===== Roadmap Section ===== */}
@@ -306,14 +314,3 @@ export default function SubSubTrackDetails() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-

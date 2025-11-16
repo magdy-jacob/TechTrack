@@ -1,7 +1,7 @@
 // src/components/AnimationCard.jsx
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Card from "../../../componants/ui/Card";
+import Card from "../../../Components/ui/Card";
 
 const AnimationCard = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1025);
@@ -18,7 +18,6 @@ const AnimationCard = () => {
     <>
       {isLargeScreen ? (
         <div className="w-[calc(100%-30px)] sm:w-1/2 flex justify-center items-center gap-3 h-[580px] overflow-hidden">
-
           <motion.div
             className="left flex flex-col justify-center items-center gap-3"
             animate={{ y: ["80%", "-80%"] }}
@@ -30,7 +29,6 @@ const AnimationCard = () => {
               <Card companyIndex={2} />
             </div>
           </motion.div>
-
 
           <motion.div
             className="right flex flex-col justify-center items-center gap-3"
@@ -45,7 +43,6 @@ const AnimationCard = () => {
           </motion.div>
         </div>
       ) : (
-
         <div className="w-[calc(100%-30px)] sm:w-1/2 flex justify-center items-center gap-3 h-[580px] overflow-hidden">
           <motion.div
             className="left flex flex-col justify-center items-center gap-3"

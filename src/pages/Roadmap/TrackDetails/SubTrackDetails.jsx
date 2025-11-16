@@ -1,8 +1,8 @@
 // import React, { useState, useEffect } from "react";
 // import { useParams, Link, useNavigate } from "react-router-dom";
 // import axios from "axios";
-// import Loader from "../../../componants/ui/Loader";
-// import ErrorMessage from "../../../componants/ui/Error";
+// import Loader from "../../../Components/ui/Loader";
+// import ErrorMessage from "../../../Components/ui/Error";
 
 // export default function TrackListPage() {
 //   const { slug, subSlug } = useParams();
@@ -34,13 +34,11 @@
 //         // );
 //         const allSubs = subResponse.data.success ? catRes.data.data : [];
 
-
 //         // 2️⃣ Find current subcategory
 //         // const foundSub = allSubs.find(
 //         //   (sub) => createSlug(sub.subCategoryName) === subSlug
 //         // );
 //         const foundSub = allSubs.find(cat => cat.subCategoryId === id);
-
 
 //         if (!foundSub) {
 //           setError("Subcategory not found");
@@ -148,13 +146,11 @@
 //   );
 // }
 
-
-
 // src/pages/TrackListPage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import Loader from "../../../componants/ui/Loader";
-import ErrorMessage from "../../../componants/ui/Error";
+import Loader from "../../../Components/ui/Loader";
+import ErrorMessage from "../../../Components/ui/Error";
 import { useApi } from "../../../context/ApiContext";
 
 export default function SubTrackDetails() {
@@ -183,20 +179,21 @@ export default function SubTrackDetails() {
           return;
         }
 
-
         // const subRes = await axios.get("http://techtrack.runasp.net/api/SubCategory");
         const subRes = await getSubCategoriesId(subId);
-        if (!subRes.data.success) throw new Error("Failed to fetch subcategories");
+        if (!subRes.data.success)
+          throw new Error("Failed to fetch subcategories");
 
         const foundSub = subRes.data.data;
 
         // تحقق إنها تابعة للـ category الصح
-        if (foundSub.categoryId !== catId || foundSub.subCategoryName === "string") {
+        if (
+          foundSub.categoryId !== catId ||
+          foundSub.subCategoryName === "string"
+        ) {
           setError("Subcategory not found in this category");
           return;
         }
-
-
 
         setSubCategory(foundSub);
 
@@ -206,8 +203,8 @@ export default function SubTrackDetails() {
         if (!trackRes.data.success) throw new Error("Failed to fetch tracks");
 
         const filteredTracks = trackRes.data.data
-          .filter(track => track.subCategoryId === subId)
-          .filter(track => track.trackName && track.trackName !== "string");
+          .filter((track) => track.subCategoryId === subId)
+          .filter((track) => track.trackName && track.trackName !== "string");
 
         setTracks(filteredTracks);
         setLoading(false);
@@ -224,7 +221,9 @@ export default function SubTrackDetails() {
   useEffect(() => {
     const getCategoryName = async () => {
       try {
-        const res = await fetch(`http://techtrack.runasp.net/api/Category/${categoryId}`);
+        const res = await fetch(
+          `http://techtrack.runasp.net/api/Category/${categoryId}`
+        );
         const data = await res.json();
         if (data && data.data && data.data.categoryName) {
           setCategoryName(data.data.categoryName);
@@ -233,10 +232,9 @@ export default function SubTrackDetails() {
         console.error("Error fetching category:", error);
       }
     };
-  
+
     if (categoryId) getCategoryName();
   }, [categoryId]);
-
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message={error} />;
@@ -245,26 +243,35 @@ export default function SubTrackDetails() {
     <div className="min-h-screen px-3 bg-white pt-16 sm:pt-20 flex flex-col items-center">
       {/* Header */}
       <section className="w-full mx-auto max-w-4xl px-2 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-15 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 lg:mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 lg:mb-6 leading-tight">
+          {subCategory.subCategoryName}
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
+          {subCategory.description}
+        </p>
+        <div className="flex gap-2 justify-center items-center pb-2">
+          <Link
+            to={"/roadmap/"}
+            className="text-[12px] md:text-[15px] text-gray-600"
+          >
+            Roadmaps
+          </Link>
+          /
+          <Link
+            to={`/roadmap/${categoryId}`}
+            className="text-[12px] md:text-[15px] text-gray-600"
+          >
+            {categoryName}
+          </Link>
+          /
+          <Link
+            to={`/roadmap/${categoryId}/${subCategoryId}`}
+            className="text-[12px] md:text-[15px]"
+          >
             {subCategory.subCategoryName}
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
-            {subCategory.description}
-          </p>
-          <div className="flex gap-2 justify-center items-center pb-2">
-            <Link to={"/roadmap/"} className="text-[12px] md:text-[15px] text-gray-600">
-              Roadmaps
-            </Link>
-            /
-            <Link to={`/roadmap/${categoryId}`} className="text-[12px] md:text-[15px] text-gray-600">
-              {categoryName}
-            </Link>
-            /
-            <Link to={`/roadmap/${categoryId}/${subCategoryId}`} className="text-[12px] md:text-[15px]">
-              {subCategory.subCategoryName}
-            </Link>
-          </div>
-          <div className="w-2xs md:w-lg h-px bg-black  mx-auto"></div>
+          </Link>
+        </div>
+        <div className="w-2xs md:w-lg h-px bg-black  mx-auto"></div>
       </section>
       {/* Tracks Grid */}
       <div className="max-w-7xl mx-auto mt-16">
@@ -291,14 +298,24 @@ export default function SubTrackDetails() {
 
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-indigo-600 font-bold">Difficulty</span>
-                  <span className={`px-4 py-2 rounded-full text-sm font-bold ${track.difficultyLevel <= 2 ? "bg-green-100 text-green-800" :
-                    track.difficultyLevel === 3 ? "bg-yellow-100 text-yellow-800" :
-                      "bg-red-100 text-red-800"
-                    }`}>
-                    {track.difficultyLevel === 1 ? "Beginner" :
-                      track.difficultyLevel === 2 ? "Beginner-Intermediate" :
-                        track.difficultyLevel === 3 ? "Intermediate" :
-                          track.difficultyLevel === 4 ? "Advanced" : "Expert"}
+                  <span
+                    className={`px-4 py-2 rounded-full text-sm font-bold ${
+                      track.difficultyLevel <= 2
+                        ? "bg-green-100 text-green-800"
+                        : track.difficultyLevel === 3
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                    }`}
+                  >
+                    {track.difficultyLevel === 1
+                      ? "Beginner"
+                      : track.difficultyLevel === 2
+                        ? "Beginner-Intermediate"
+                        : track.difficultyLevel === 3
+                          ? "Intermediate"
+                          : track.difficultyLevel === 4
+                            ? "Advanced"
+                            : "Expert"}
                   </span>
                 </div>
 

@@ -2,8 +2,8 @@
 // import { Link, useParams, useNavigate } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 // import axios from "axios";
-// import Loader from "../../../componants/ui/Loader";
-// import ErrorMessage from "../../../componants/ui/Error";
+// import Loader from "../../../Components/ui/Loader";
+// import ErrorMessage from "../../../Components/ui/Error";
 
 // export default function FrontendPage() {
 //   const { slug } = useParams();
@@ -19,7 +19,6 @@
 //       try {
 //         setLoading(true);
 
-
 //         const categoriesResponse = await axios.get('http://techtrack.runasp.net/api/Category');
 
 //         if (categoriesResponse.data.success && Array.isArray(categoriesResponse.data.data)) {
@@ -30,9 +29,6 @@
 //         } else {
 //           throw new Error('Unexpected API response');
 //         }
-
-
-
 
 //         const foundCategory = categories.find(cat =>
 //           createSlug(cat.categoryName) === slug
@@ -45,7 +41,6 @@
 //         }
 
 //         setCurrentCategory(foundCategory);
-
 
 //         const subCategoriesResponse = await axios.get('http://techtrack.runasp.net/api/SubCategories');
 //         const filteredSubCategories = subCategoriesResponse.data.data.filter(item =>
@@ -65,7 +60,6 @@
 
 //     fetchData();
 //   }, [slug]);
-
 
 //   const createSlug = (name) => {
 //     return name
@@ -158,16 +152,12 @@
 //   );
 // }
 
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Loader from "../../../componants/ui/Loader";
-import ErrorMessage from "../../../componants/ui/Error";
-import { useApi } from '../../../context/ApiContext';
+import Loader from "../../../Components/ui/Loader";
+import ErrorMessage from "../../../Components/ui/Error";
+import { useApi } from "../../../context/ApiContext";
 
 export default function CategoryPage() {
   const { getCategoriesId, getSubCategories } = useApi();
@@ -178,7 +168,6 @@ export default function CategoryPage() {
   const [subCategories, setSubCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -192,7 +181,6 @@ export default function CategoryPage() {
           setLoading(false);
           return;
         }
-
 
         // const catRes = await axios.get("http://techtrack.runasp.net/api/Category");
         const catRes = await getCategoriesId(id);
@@ -209,12 +197,11 @@ export default function CategoryPage() {
 
         setCategory(categories);
 
-
         // const subRes = await axios.get("http://techtrack.runasp.net/api/SubCategory");
         const subRes = await getSubCategories();
         const filteredSubs = (subRes.data.success ? subRes.data.data : [])
-          .filter(sub => sub.categoryId === id)
-          .filter(sub => sub.subCategoryName !== "string");
+          .filter((sub) => sub.categoryId === id)
+          .filter((sub) => sub.subCategoryName !== "string");
 
         setSubCategories(filteredSubs);
         setLoading(false);
@@ -235,24 +222,23 @@ export default function CategoryPage() {
     <div className="min-h-screen px-3 bg-white pt-16 sm:pt-20 flex flex-col items-center">
       {/* Header */}
       <section className="w-full mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-15 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 lg:mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 lg:mb-6 leading-tight">
+          {category.categoryName}
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
+          {category.description}
+        </p>
+        <div className="flex gap-2 justify-center items-center pb-2">
+          <Link to={"/roadmap/"} className="text-[15px] text-gray-600">
+            Roadmaps
+          </Link>
+          /
+          <Link to={`/roadmap/${category.categoryId}`} className="text-[15px]">
             {category.categoryName}
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
-            {category.description}
-          </p>
-          <div className="flex gap-2 justify-center items-center pb-2">
-            <Link to={"/roadmap/"} className="text-[15px] text-gray-600">
-              Roadmaps
-            </Link>
-            /
-            <Link to={`/roadmap/${category.categoryId}`} className="text-[15px]">
-              {category.categoryName}
-            </Link>
-          </div>
-          <div className="w-2xs md:w-lg h-px bg-black  mx-auto"></div>
+          </Link>
+        </div>
+        <div className="w-2xs md:w-lg h-px bg-black  mx-auto"></div>
       </section>
-      
 
       <h2 className="text-3xl font-bold text-center mb-10 sm:mb-12 lg:mb-15 text-gray-800">
         Specialization Tracks
@@ -271,7 +257,6 @@ export default function CategoryPage() {
                 src={sub.imageUrl || "/src/assets/image/software.webp"}
                 alt={sub.subCategoryName}
                 className="w-full h-48 object-cover"
-
               />
             )}
             <div className="p-6 flex flex-col flex-grow">
@@ -332,12 +317,3 @@ export default function CategoryPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-

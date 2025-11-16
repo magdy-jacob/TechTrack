@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Filter from "./Filter";
-import Card from "../../components/ui/Card.jsx";
+import Card from "../../Components/ui/Card.jsx";
 
 const Companies = () => {
   const cardsPerPage = 6; //
@@ -183,9 +183,9 @@ export default Companies;
 // import React, { useState, useEffect, useMemo } from 'react';
 // import { Search } from "lucide-react";
 // import { motion, AnimatePresence } from 'framer-motion';
-// import Card from '../../componants/ui/Card';
-// import Loader from '../../componants/ui/Loader'; // ملفك
-// import ErrorMessage from '../../componants/ui/Error'; // ملفك
+// import Card from '../../Components/ui/Card';
+// import Loader from '../../Components/ui/Loader'; // ملفك
+// import ErrorMessage from '../../Components/ui/Error'; // ملفك
 // import { useApi } from '../../context/ApiContext';
 
 // const Companies = () => {
