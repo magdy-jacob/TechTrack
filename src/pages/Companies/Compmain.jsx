@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Filter from "./Filter";
+import Filter from './Filter.jsx';
 import Card from "../../componants/ui/Card";
 
 const Companies = () => {
@@ -183,7 +183,6 @@ export default Companies;
 // import React, { useState, useEffect, useMemo } from 'react';
 // import { Search } from "lucide-react";
 // import { motion, AnimatePresence } from 'framer-motion';
-// import Filter from '../companies/Filter';
 // import Card from '../../componants/ui/Card';
 // import Loader from '../../componants/ui/Loader'; // ملفك
 // import ErrorMessage from '../../componants/ui/Error'; // ملفك
