@@ -1,0 +1,62 @@
+{
+  "opportunity": {
+    "head": "Where Learning Meets Opportunity",
+    "title": "Discover Top Companies That Value Your Skills",
+    "paragraph": "See how your learning journey connects to real companies hiring in every tech track while you explore the technologies they use and the projects built with them as you discover their office locations across Egypt and find where your new skills can take you next.",
+    "btn": "Explore Companies"
+  },
+  "Tracks": {
+    "head": "Your Tech Journey Starts Here",
+    "title": "Explore Your Personalized Tech Career Roadmaps",
+    "paragraph": "Find the perfect learning path for your tech career where each roadmap shows you the key skills to master and the latest technologies used in every track while guiding you through engaging intro videos and real projects so you can confidently prepare for the most common interview questions all in one place.",
+    "btn": "View All Tracks"
+  },
+  "Reviews": {
+    "head": "What Our Learners Say",
+    "title": "Hear from People Who Grew with TechTrack",
+    "paragraph": "Real experiences from learners who explored tech tracks and built careers in Egypt’s tech scene."
+  },
+  "nav": {
+    "links": {
+      "home": "Home",
+      "roadmaps": "Roadmaps",
+      "companies": "Companies",
+      "reviews": "Reviews"
+    },
+    "signup": "Sign Up"
+  },
+  "footer": {
+    "explore": {
+      "title": "Explore",
+      "links": {
+        "home": "Home",
+        "roadmaps": "Roadmaps",
+        "companies": "Companies",
+        "reviews": "Reviews"
+      }
+    },
+    "techtrack": {
+      "title": "TechTrack",
+      "links": {
+        "about": "About Us",
+        "contact": "Contact"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
+    },
+    "description": "Empowering learners in Egypt to explore every tech field through clear roadmaps, essential technologies, and company insights.",
+    "rights": "All rights reserved."
+  },
+  "HeroSection" : {
+    "head" : "Start Your Tech Career",
+    "title" : "Discover Your Ultimate Path in Egypt’s Tech World",
+    "paragraph" :"Step into Egypt’s tech world with comprehensive Roadmaps, top companies, standout projects, watch intro videos to understand each field and learn from renowned developers and Master your career path with step by step.",
+    "Primary_Button" : "Start Your Journey",
+    "Explore_Companies" : "Explore Companies"
+  }
+}
