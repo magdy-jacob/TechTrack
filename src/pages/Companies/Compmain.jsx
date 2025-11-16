@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Search } from "lucide-react";
-import { motion, AnimatePresence } from 'framer-motion';
-import Filter from './Filter';
-import Card from '../../componants/ui/Card';
-
+import { motion, AnimatePresence } from "framer-motion";
+import Filter from "./Filter";
+import Card from "../../componants/ui/Card";
 
 const Companies = () => {
-  const cardsPerPage = 6; // 
+  const cardsPerPage = 6; //
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [searchTerm, setSearchTerm] = useState("");
 
   const totalCards = 12;
   const totalPages = Math.ceil(totalCards / cardsPerPage);
 
   const startIndex = (currentPage - 1) * cardsPerPage;
-
-
 
   const visibleCards = Array.from(
     { length: Math.min(cardsPerPage, totalCards - startIndex) },
@@ -34,41 +30,34 @@ const Companies = () => {
     }
   };
 
-
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSearch();
     }
   };
 
-
-
   const handleSearch = () => {
-
     if (currentPage !== 1) {
       setCurrentPage(1);
     }
-
-
   };
-
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
-    }
+      opacity: 1,
+    },
   };
 
   const paginationVariants = {
@@ -76,13 +65,12 @@ const Companies = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-25">
-
       {/* Search Bar */}
       <div className="flex items-center w-full max-w-3xl mx-auto mt-10 border border-gray-300 rounded-full px-3 py-2 focus-within:shadow-md transition">
         <Search className="text-gray-500 w-5 h-5 mr-2" />
@@ -104,7 +92,6 @@ const Companies = () => {
 
       {/* Filter + Cards */}
       <div className="mt-10 mb-20 flex flex-col md:flex-row gap-6">
-
         {/* Filter */}
         <Filter />
 
@@ -140,29 +127,33 @@ const Companies = () => {
                 disabled={currentPage === 1}
                 whileHover={{ scale: currentPage === 1 ? 1 : 1.05 }}
                 whileTap={{ scale: currentPage === 1 ? 1 : 0.95 }}
-                className={`px-5 py-2 rounded-lg font-medium transition ${currentPage === 1
-                  ? 'text-gray-400 cursor-not-allowed'
-                  : 'hover:bg-gray-100 border border-gray-300'
-                  }`}
+                className={`px-5 py-2 rounded-lg font-medium transition ${
+                  currentPage === 1
+                    ? "text-gray-400 cursor-not-allowed"
+                    : "hover:bg-gray-100 border border-gray-300"
+                }`}
               >
                 Previous
               </motion.button>
 
               {/* Page Numbers */}
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                <motion.button
-                  key={page}
-                  onClick={() => goToPage(page)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className={`w-10 h-10 rounded-lg font-medium transition ${currentPage === page
-                    ? 'bg-blue-600 text-white'
-                    : 'hover:bg-gray-100 border border-gray-300'
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <motion.button
+                    key={page}
+                    onClick={() => goToPage(page)}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`w-10 h-10 rounded-lg font-medium transition ${
+                      currentPage === page
+                        ? "bg-blue-600 text-white"
+                        : "hover:bg-gray-100 border border-gray-300"
                     }`}
-                >
-                  {page}
-                </motion.button>
-              ))}
+                  >
+                    {page}
+                  </motion.button>
+                )
+              )}
 
               {/* Next Button */}
               <motion.button
@@ -170,10 +161,11 @@ const Companies = () => {
                 disabled={currentPage === totalPages}
                 whileHover={{ scale: currentPage === totalPages ? 1 : 1.05 }}
                 whileTap={{ scale: currentPage === totalPages ? 1 : 0.95 }}
-                className={`px-5 py-2 rounded-lg font-medium transition ${currentPage === totalPages
-                  ? 'text-gray-400 cursor-not-allowed'
-                  : 'hover:bg-gray-100 border border-gray-300'
-                  }`}
+                className={`px-5 py-2 rounded-lg font-medium transition ${
+                  currentPage === totalPages
+                    ? "text-gray-400 cursor-not-allowed"
+                    : "hover:bg-gray-100 border border-gray-300"
+                }`}
               >
                 Next
               </motion.button>
@@ -186,8 +178,6 @@ const Companies = () => {
 };
 
 export default Companies;
-
-
 
 // // Compmain.jsx (محدث)
 // import React, { useState, useEffect, useMemo } from 'react';
