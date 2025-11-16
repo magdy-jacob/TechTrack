@@ -65,3 +65,90 @@ TechTrack/
 🧑‍💻 User authentication system
 🧾 Dynamic content from database or API
 
+
+```
+TechTrack
+├─ .eslintrc.json
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ locales
+│  │  ├─ ar
+│  │  │  └─ translation.json
+│  │  └─ en
+│  │     └─ translation.json
+│  └─ vite.svg
+├─ README.md
+├─ src
+│  ├─ App.jsx
+│  ├─ assets
+│  │  └─ image
+│  │     ├─ AI.webp
+│  │     ├─ arrow-up-right.png
+│  │     ├─ bg.png
+│  │     ├─ cup.png
+│  │     ├─ Design.webp
+│  │     ├─ devicon_redis.svg
+│  │     ├─ DevOps.webp
+│  │     ├─ LOGO-Yellow 1.jpg
+│  │     ├─ LOGO-Yellow 2.png
+│  │     ├─ LOGO-Yellow 3.png
+│  │     ├─ logo1.png
+│  │     ├─ logo2.png
+│  │     ├─ Software.webp
+│  │     └─ Vector.png
+│  ├─ componants
+│  │  ├─ layout
+│  │  │  ├─ Footer.jsx
+│  │  │  └─ Nav.jsx
+│  │  └─ ui
+│  │     ├─ Btn.jsx
+│  │     ├─ Card.jsx
+│  │     ├─ data.json
+│  │     ├─ Error.jsx
+│  │     ├─ Info.jsx
+│  │     └─ Loader.jsx
+│  ├─ context
+│  │  └─ ApiContext.jsx
+│  ├─ main.jsx
+│  ├─ pages
+│  │  ├─ Companies
+│  │  │  ├─ Compmain.jsx
+│  │  │  └─ Filter.jsx
+│  │  ├─ home
+│  │  │  ├─ AllTrack
+│  │  │  │  ├─ Circles.jsx
+│  │  │  │  └─ Tracks.jsx
+│  │  │  ├─ HeroSection
+│  │  │  │  └─ HeroSection.jsx
+│  │  │  ├─ Home.jsx
+│  │  │  ├─ Opportunity
+│  │  │  │  ├─ AnimationCard.jsx
+│  │  │  │  └─ Opportunity.jsx
+│  │  │  └─ Review
+│  │  │     ├─ ReviewCard.jsx
+│  │  │     └─ Reviews.jsx
+│  │  ├─ NotFound
+│  │  │  └─ NotFound.jsx
+│  │  └─ Roadmap
+│  │     ├─ RoadmapPage.jsx
+│  │     ├─ TrackCard.jsx
+│  │     └─ TrackDetails
+│  │        ├─ QuestionsList
+│  │        │  └─ QuestionsList.jsx
+│  │        ├─ RoadmapLine.jsx
+│  │        ├─ SubSubTrackDetails.jsx
+│  │        ├─ SubTrackDetails.jsx
+│  │        ├─ TrackDetails.jsx
+│  │        └─ VideoModal.jsx
+│  ├─ styles
+│  │  └─ index.css
+│  └─ utils
+│     ├─ api.js
+│     ├─ helpers.js
+│     └─ i18n.js
+└─ vite.config.js
+
+```

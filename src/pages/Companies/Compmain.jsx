@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search } from "lucide-react";
 import { motion, AnimatePresence } from 'framer-motion';
-import Filter from '../companies/filters';
+import Filter from './Filter';
 import Card from '../../componants/ui/Card';
 
 
