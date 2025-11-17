@@ -103,7 +103,7 @@ import { useApi } from "../../../context/ApiContext";
 
 export default function SubSubTrackDetails() {
   const { trackId, categoryId, subCategoryId } = useParams();
-  const baseUrl = "http://techtrack.runasp.net/api";
+  const baseUrl = "/api";
   const { getTracksId, getTechnologies } = useApi();
 
   const [track, setTrack] = useState(null);
@@ -185,7 +185,7 @@ export default function SubSubTrackDetails() {
     const getCategoryName = async () => {
       try {
         const res = await fetch(
-          `http://techtrack.runasp.net/api/Category/${categoryId}`
+          `/api/Category/${categoryId}`
         );
         const data = await res.json();
         if (data && data.data && data.data.categoryName) {
@@ -202,7 +202,7 @@ export default function SubSubTrackDetails() {
     const getSubCategoryId = async () => {
       try {
         const res = await fetch(
-          `http://techtrack.runasp.net/api/SubCategory/${subCategoryId}`
+          `/api/SubCategory/${subCategoryId}`
         );
         const data = await res.json();
         if (data && data.data && data.data.subCategoryName) {

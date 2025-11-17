@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://techtrack.runasp.net/api',
+    baseURL: '/api',
     timeout: 10000,
 });
 // http://techtrack.runasp.net/api/Company

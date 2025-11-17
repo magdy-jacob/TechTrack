@@ -187,7 +187,6 @@ export default Card;
 //       try {
 //         setLoading(true);
 //         setError(null);
-//         // const response = await axios.get('http://techtrack.runasp.net/api/Company');
 //         // setCompanies(response.data);
 //         const res = await getCompanies();
 //         setCompanies(res.data);

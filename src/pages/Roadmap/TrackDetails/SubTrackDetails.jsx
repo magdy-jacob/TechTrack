@@ -222,7 +222,7 @@ export default function SubTrackDetails() {
     const getCategoryName = async () => {
       try {
         const res = await fetch(
-          `http://techtrack.runasp.net/api/Category/${categoryId}`
+          `/api/Category/${categoryId}`
         );
         const data = await res.json();
         if (data && data.data && data.data.categoryName) {

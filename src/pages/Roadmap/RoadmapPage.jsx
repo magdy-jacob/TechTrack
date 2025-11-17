@@ -20,7 +20,6 @@ const RoadmapPage = () => {
     const fetchTracks = async () => {
       try {
         setLoading(true);
-        // const response = await axios.get('http://techtrack.runasp.net/api/Category');
         const response = await getCategories();
         if (response.data.success && Array.isArray(response.data.data)) {
           const formattedTracks = response.data.data
@@ -144,7 +143,6 @@ export default RoadmapPage;
 //                 setLoading(true);
 //                 setError(null);
 
-//                 const response = await axios.get('http://techtrack.runasp.net/api/Category');
 
 //                 if (response.data.success && Array.isArray(response.data.data)) {
 //                     const formattedTracks = response.data.data.map(item => ({

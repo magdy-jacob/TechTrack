@@ -10,7 +10,7 @@ const RoadmapLine = ({ displayTitle, error, loading, technologyId }) => {
     const gettech = async () => {
       try {
         const res = await fetch(
-          `http://techtrack.runasp.net/api/Roadmap/${technologyId}`
+          `/api/Roadmap/${technologyId}`
         );
         const data = await res.json();
         setTechSteps(data.steps);

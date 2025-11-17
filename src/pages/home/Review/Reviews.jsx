@@ -174,7 +174,6 @@
 //       try {
 //         setLoading(true);
 
-//         const response = await axios.get("http://techtrack.runasp.net/api/UserTechnologyReview");
 
 
 //         const formattedReviews = response.data.map(review => ({
