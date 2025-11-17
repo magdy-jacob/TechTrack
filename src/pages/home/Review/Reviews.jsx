@@ -268,7 +268,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion, useAnimation } from "framer-motion";
-import ReviewCard from "./reviewCard";
+import ReviewCard from "./ReviewCard";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
