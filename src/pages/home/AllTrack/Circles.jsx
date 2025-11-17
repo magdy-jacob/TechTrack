@@ -110,7 +110,7 @@ const Circles = () => {
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center pointer-events-none">
                         <img
-                            src="src/assets/image/logo2.png"
+                            src="/assets/image/logo2.png"
                             alt="TechTrack Logo"
                             className="w-10 h-10 mb-3 md:w-12 md:h-12 sm:w-10 sm:h-10"
                         />

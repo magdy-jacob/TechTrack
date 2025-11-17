@@ -28,7 +28,7 @@ const RoadmapPage = () => {
               categoryId: item.categoryId,
               title: item.categoryName,
               desc: item.description,
-              img: item.imageUrl || "/src/assets/image/software.webp",
+              img: item.imageUrl || "/assets/image/software.webp",
             }))
             .reverse();
           setTracks(formattedTracks);
@@ -151,7 +151,6 @@ export default RoadmapPage;
 //                         id: item.categoryId,
 //                         title: item.categoryName,
 //                         desc: item.description,
-//                         img: item.imageUrl || '/src/assets/image/software.webp',
 //                     }));
 //                     setTracks(formattedTracks);
 //                 } else {

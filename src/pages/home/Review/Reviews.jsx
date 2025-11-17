@@ -144,6 +144,10 @@
 
 // export default Reviews;
 
+
+
+
+
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 // import { motion, useAnimation } from "framer-motion";
@@ -171,6 +175,7 @@
 //         setLoading(true);
 
 //         const response = await axios.get("http://techtrack.runasp.net/api/UserTechnologyReview");
+
 
 //         const formattedReviews = response.data.map(review => ({
 //           id: review.reviewId,
@@ -228,6 +233,7 @@
 //         />
 //       </div>
 
+
 //       {reviews.length === 0 ? (
 //         <div className="text-center py-12">
 //           <div className="text-gray-400 text-6xl mb-4">💬</div>
@@ -265,10 +271,12 @@
 
 // export default Reviews;
 
+
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion, useAnimation } from "framer-motion";
-import ReviewCard from "./reviewCard";
+import ReviewCard from "./ReviewCard";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);

@@ -1,7 +1,7 @@
 
-import heroImg from "/src/assets/image/bg.png";
-import heroVector from "/src/assets/image/Vector.png";
-import arrowVector from "/src/assets/image/arrow-up-right.png";
+import heroImg from "/assets/image/bg.png";
+import heroVector from "/assets/image/Vector.png";
+import arrowVector from "/assets/image/arrow-up-right.png";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom"; // import navigation hook
 

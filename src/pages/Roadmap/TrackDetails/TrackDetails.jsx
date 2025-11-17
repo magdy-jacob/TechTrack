@@ -254,7 +254,7 @@ export default function CategoryPage() {
           >
             {sub.imageUrl && (
               <img
-                src={sub.imageUrl || "/src/assets/image/software.webp"}
+                src={sub.imageUrl || "/assets/image/software.webp"}
                 alt={sub.subCategoryName}
                 className="w-full h-48 object-cover"
               />
