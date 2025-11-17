@@ -2,8 +2,10 @@
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "http://techtrack.runasp.net/api/$1"
+        "destination": "https://techtrack.runasp.net/api/$1"
       }
-    ]
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
   

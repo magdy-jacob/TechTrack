@@ -76,15 +76,6 @@ TechTrack
 ├─ package-lock.json
 ├─ package.json
 ├─ public
-│  ├─ locales
-│  │  ├─ ar
-│  │  │  └─ translation.json
-│  │  └─ en
-│  │     └─ translation.json
-│  └─ vite.svg
-├─ README.md
-├─ src
-│  ├─ App.jsx
 │  ├─ assets
 │  │  └─ image
 │  │     ├─ AI.webp
@@ -101,7 +92,16 @@ TechTrack
 │  │     ├─ logo2.png
 │  │     ├─ Software.webp
 │  │     └─ Vector.png
-│  ├─ Components
+│  ├─ locales
+│  │  ├─ ar
+│  │  │  └─ translation.json
+│  │  └─ en
+│  │     └─ translation.json
+│  └─ vite.svg
+├─ README.md
+├─ src
+│  ├─ App.jsx
+│  ├─ components
 │  │  ├─ layout
 │  │  │  ├─ Footer.jsx
 │  │  │  └─ Nav.jsx
@@ -151,6 +151,7 @@ TechTrack
 │     ├─ api.js
 │     ├─ helpers.js
 │     └─ i18n.js
+├─ vercel.json
 └─ vite.config.js
 
 ```
