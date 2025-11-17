@@ -1,20 +1,19 @@
-// src/services/api.js
+
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: '/api',
+    // baseURL: '/api',
+    baseURL: 'http://techtrack.runasp.net/api',
     timeout: 10000,
 });
-// http://techtrack.runasp.net/api/Company
 
-// API Endpoints (كل واحد function بسيطة)
 export const apiService = {
-    // Companies
+
     getCompanies: () => api.get('/Company'),
     getCompanyById: (companyId) => api.get(`/Company/${companyId}`),
     getCompanyTechnologies: () => api.get(`/CompanyTechnology`),
 
-    // Roadmap
+
     getCategories: () => api.get('/Category'),
     getCategoriesId: (categoryId) => api.get(`/Category/${categoryId}`),
 
@@ -26,6 +25,7 @@ export const apiService = {
     getTechnologies: () => api.get(`/Technology`),
     getTechnologiesId: (technologyId) => api.get(`/Technology/${technologyId}`),
     getInterviewQuestions: () => api.get(`/InterviewQuestion`),
+    getRoadmap: () => api.get(`/Roadmap`),
 
 
 };

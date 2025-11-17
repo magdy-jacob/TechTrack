@@ -1,11 +1,12 @@
-// src/Roadmap/TrackCard.jsx
-import React from "react";
-import { Btn } from "../../components/ui/Btn";
 
-const TrackCard = ({ title, desc, img, index }) => {
+import React from 'react';
+import { Btn } from '../../componants/ui/Btn';
+
+
+const TrackCard = ({ title, desc, img, categoryId }) => {
   return (
-    <div
-      className={`
+    <div className={`
+
             relative overflow-hidden rounded-2xl 
             group
             w-full
@@ -23,14 +24,19 @@ const TrackCard = ({ title, desc, img, index }) => {
             mx-auto
         `}
     >
+
+
+
       <div className="absolute inset-0">
         <img
           src={img}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          loading="lazy"
+          className=" h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          width="1200"
+          height="600"
         />
       </div>
+
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20"></div>
 
@@ -44,7 +50,7 @@ const TrackCard = ({ title, desc, img, index }) => {
 
         <div className="self-end">
           <Btn
-            url={`roadmap/${index}`}
+            url={`roadmap/${categoryId}`}
             content="View Details"
             Px="6"
             className="text-xs xs:text-sm sm:text-base"

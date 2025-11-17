@@ -1,5 +1,5 @@
 import React from "react";
-import Info from "../../../components/ui/Info";
+import Info from "../../../componants/ui/Info";
 import AnimationCard from "./AnimationCard";
 import { useTranslation } from "react-i18next";
 
@@ -13,7 +13,7 @@ const Opportunity = () => {
 
   return (
     <div className=" flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16 items-center justify-center container mx-auto mt-10 sm:mt-32 mb-10">
-      <Info head={head} title={title} paragraph={paragraph} btn={btn} />
+      <Info head={head} title={title} paragraph={paragraph} btn={btn} url="companies" />
       <AnimationCard />
     </div>
   );

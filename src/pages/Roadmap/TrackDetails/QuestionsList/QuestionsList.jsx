@@ -1,91 +1,63 @@
-import { useState, useEffect, useMemo } from "react";
+// src/components/TrackDetails/QuestionsList/QuestionsList.jsx
+import React, { useState, useMemo } from "react";
 import { useApi } from "../../../../context/ApiContext";
-import Loader from "../../../../components/ui/Loader";
-import ErrorMessage from "../../../../components/ui/Error";
+import Loader from "../../../../componants/ui/Loader";
+import ErrorMessage from "../../../../componants/ui/Error";
 
 const QuestionsList = ({
   technologyId,
   showSearch = true,
   showFilters = true,
 }) => {
-  const { getInterviewQuestions, getTechnologiesId } = useApi();
-  const [questions, setQuestions] = useState([]);
-  const [technology, setTechnology] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { interviewQuestions, allTechnologies, loading, error } = useApi();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDifficulty, setSelectedDifficulty] = useState("all");
 
-  useEffect(() => {
-    const fetchTechnologies = async () => {
-      try {
-        const res = await getTechnologiesId(technologyId);
-        const technologyData = res.data.data || res.data;
-        setTechnology(technologyData);
-      } catch (err) {
-        console.error("Error fetching track:", err);
-      }
-    };
-    if (technologyId) fetchTechnologies();
-  }, [technologyId, getTechnologiesId]);
+  // ابحث عن التقنية
+  const technology = allTechnologies.find(
+    (t) => t.technologyId === parseInt(technologyId)
+  );
 
-  useEffect(() => {
-    const fetchQuestionsForTrack = async () => {
-      try {
-        setLoading(true);
-        const response = await getInterviewQuestions();
-        let questionsData = response.data;
+  // فلترة الأسئلة حسب التقنية
+  const questions = useMemo(() => {
+    return interviewQuestions
+      .filter((q) => q.technologyId === parseInt(technologyId))
+      .filter((q) => q.questionText && q.questionText !== "string");
+  }, [interviewQuestions, technologyId]);
 
-        const TechnologiesQuestions = questionsData.filter(
-          (tech) => tech.technologyId === parseInt(technologyId)
-        );
-
-        setQuestions(TechnologiesQuestions);
-        setLoading(false);
-      } catch (err) {
-        console.error("Error fetching questions:", err);
-        setError("Failed to load questions. Please try again later.");
-        setLoading(false);
-      }
-    };
-
-    if (technologyId) fetchQuestionsForTrack();
-  }, [technologyId, getInterviewQuestions]);
-
+  // فلترة حسب البحث والصعوبة
   const filteredQuestions = useMemo(() => {
     let filtered = [...questions];
 
     if (searchTerm) {
       filtered = filtered.filter(
-        (question) =>
-          question.questionText
-            ?.toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          question.sampleAnswer
-            ?.toLowerCase()
-            .includes(searchTerm.toLowerCase())
+        (q) =>
+          q.questionText?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          q.sampleAnswer?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     if (selectedDifficulty !== "all") {
       filtered = filtered.filter(
-        (question) => question.difficultyLevel === selectedDifficulty
+        (q) => q.difficultyLevel === selectedDifficulty
       );
     }
 
     return filtered;
   }, [questions, searchTerm, selectedDifficulty]);
 
-  const difficultyLevels = [
-    ...new Set(questions.map((q) => q.difficultyLevel)),
-  ];
+  const difficultyLevels = [...new Set(questions.map((q) => q.difficultyLevel))];
 
   const handleResetFilters = () => {
     setSearchTerm("");
     setSelectedDifficulty("all");
   };
 
-  if (!technologyId) return <Loader />;
+  // حالات التحميل والخطأ
+  if (!technologyId || !technology) {
+    return <ErrorMessage message="Technology not found" />;
+  }
   if (loading) return <Loader />;
   if (error) return <ErrorMessage message={error} />;
 
@@ -162,20 +134,10 @@ const QuestionsList = ({
         </p>
         <div className="flex gap-4 text-sm text-gray-500">
           <span>
-            Technical:{" "}
-            {
-              questions.filter(
-                (q) => q.questionType.toLowerCase() === "technical"
-              ).length
-            }
+            Technical: {questions.filter((q) => q.questionType.toLowerCase() === "technical").length}
           </span>
           <span>
-            Behavioral:{" "}
-            {
-              questions.filter(
-                (q) => q.questionType.toLowerCase() === "behavioral"
-              ).length
-            }
+            Behavioral: {questions.filter((q) => q.questionType.toLowerCase() === "behavioral").length}
           </span>
         </div>
       </div>
@@ -212,6 +174,7 @@ const QuestionsList = ({
   );
 };
 
+// QuestionCard (منفصل ومُنظّف)
 const QuestionCard = ({ question, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 

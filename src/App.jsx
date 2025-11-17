@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import RoadmapPage from "./pages/Roadmap/RoadmapPage";
-import CategoryPage from "./pages/Roadmap/TrackDetails/TrackDetails";
-import SubTrackDetails from "./pages/Roadmap/TrackDetails/SubTrackDetails";
-import SubSubTrackDetails from "./pages/Roadmap/TrackDetails/SubSubTrackDetails";
-// import QuestionsList from './pages/Roadmap/TrackDetails/QuestionsList/QuestionsList';
-// import Reviews from './pages/Reviews/Reviews';
-import Nav from "./components/layout/Nav.jsx";
-import Footer from "./components/layout/Footer.jsx";
-import Companies from "./pages/Companies/Compmain.jsx";
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home';
+import RoadmapPage from './pages/Roadmap/RoadmapPage';
+import CategoryPage from './pages/Roadmap/TrackDetails/TrackDetails';
+import SubTrackDetails from './pages/Roadmap/TrackDetails/SubTrackDetails';
+import SubSubTrackDetails from './pages/Roadmap/TrackDetails/SubSubTrackDetails';
+import Nav from './componants/layout/Nav.jsx';
+import Footer from './componants/layout/Footer.jsx';
+import Companies from './pages/Companies/Compmain.jsx';
+
 function App() {
   return (
     <Router>
@@ -31,7 +31,6 @@ function App() {
 
         <Route path="/companies" element={<Companies />} />
 
-        {/* <Route path='/reviews' element={<Reviews />} /> */}
       </Routes>
       <Footer />
     </Router>

@@ -1,0 +1,524 @@
+// subCategory
+{
+    "success": true,
+    "data": [
+        {
+            "subCategoryId": 1,
+            "categoryId": 1,
+            "subCategoryName": "website",
+            "description": "Building and coding the websites you see in your browser.(Like company sites or news portals)",
+            "difficultyLevel": 2,
+            "estimatedDuration": 120,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/frontend_sample.jpg"
+        },
+        {
+            "subCategoryId": 2,
+            "categoryId": 1,
+            "subCategoryName": "Mobile",
+            "description": "Creating the apps you install and run on your smartphone.(For Android and iOS)",
+            "difficultyLevel": 3,
+            "estimatedDuration": 150,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/backend_sample.jpg"
+        },
+        {
+            "subCategoryId": 3,
+            "categoryId": 1,
+            "subCategoryName": "Game",
+            "description": " Developing video games from start to finish.(For PC, mobile, and consoles)",
+            "difficultyLevel": 2,
+            "estimatedDuration": 80,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/testing_sample.jpg"
+        },
+        {
+            "subCategoryId": 4,
+            "categoryId": 2,
+            "subCategoryName": "Data",
+            "description": "You examine data to find patterns and help make decisions.(Example: Analyzing sales to find the best-selling product)",
+            "difficultyLevel": 4,
+            "estimatedDuration": 100,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/architecture_sample.jpg"
+        },
+        {
+            "subCategoryId": 5,
+            "categoryId": 2,
+            "subCategoryName": "AI",
+            "description": "You use statistics and AI to find hidden patterns and predict future trends from data.(Example: Predicting stock prices or customer behavior)",
+            "difficultyLevel": 2,
+            "estimatedDuration": 100,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/data_analysis_sample.jpg"
+        },
+        {
+            "subCategoryId": 6,
+            "categoryId": 3,
+            "subCategoryName": "UI UX Design",
+            "description": "UI (User Interface) is the look and layout of an app.UX (User Experience) is the feel and ease of using the app.",
+            "difficultyLevel": 4,
+            "estimatedDuration": 180,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/ml_sample.jpg"
+        },
+        {
+            "subCategoryId": 7,
+            "categoryId": 4,
+            "subCategoryName": "DevOps",
+            "description": "You bridge the gap between coding and operations to make software delivery faster and more reliable.(You automate everything to get products to users quickly)",
+            "difficultyLevel": 5,
+            "estimatedDuration": 200,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/dl_sample.jpg"
+        },
+        {
+            "subCategoryId": 8,
+            "categoryId": 4,
+            "subCategoryName": "Cyber security",
+            "description": "You protect systems and networks from digital attacks and hackers.(You are the digital security guard)",
+            "difficultyLevel": 2,
+            "estimatedDuration": 60,
+            "imageUrl": "https://res.cloudinary.com/djhifbjsx/image/upload/v1762618536/ethics_sample.jpg"
+        }
+    ]
+}
+// Tracks
+{
+    "success": true,
+    "data": [
+        {
+            "trackId": 1,
+            "trackName": "Frontend Development",
+            "description": "Learn how to build user interfaces and interactive web experiences using modern technologies. Progress through HTML, CSS, JavaScript, frameworks, UI patterns, design systems, and accessibility best practices.",
+            "difficultyLevel": "Intermediate",
+            "estimatedDuration": 180,
+            "subCategoryId": 1
+        },
+        {
+            "trackId": 2,
+            "trackName": "Backend Development",
+            "description": "Explore the logic, security, and performance behind every digital product. Understand servers, APIs, databases, authentication, and scalable system design.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 200,
+            "subCategoryId": 1
+        },
+        {
+            "trackId": 3,
+            "trackName": "Full Stack Development",
+            "description": "Combine both frontend and backend skills to create complete applications. Learn how data flows, how servers connect to UI, and how to deploy full products.",
+            "difficultyLevel": "Intermediate",
+            "estimatedDuration": 300,
+            "subCategoryId": 1
+        },
+        {
+            "trackId": 4,
+            "trackName": "Android Development",
+            "description": "Building applications for devices that run the Android operating system.Done using Kotlin or Java in the Android Studio environment.Involves adapting to a wide variety of device screen sizes and manufacturers.",
+            "difficultyLevel": "Intermediate",
+            "estimatedDuration": 120,
+            "subCategoryId": 2
+        },
+        {
+            "trackId": 5,
+            "trackName": "iOS Development",
+            "description": "Specializing in building apps exclusively for Apple devices (iPhone, iPad).Done using the Swift language and Xcode environment on a Mac.Requires adhering to Apple's strict guidelines to publish on the App Store.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 250,
+            "subCategoryId": 2
+        },
+        {
+            "trackId": 6,
+            "trackName": "Cross-Platform Development",
+            "description": "Building one application that runs on both iOS and Android.Saves time and resources using frameworks like Flutter or React Native.The ideal solution for reaching a wider audience faster and more cost-effectively.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 280,
+            "subCategoryId": 2
+        },
+        {
+            "trackId": 7,
+            "trackName": "Game Development",
+            "description": "A Game Developer is responsible for programming and technically developing the game. They use programming languages like C# and C++, and game engines like Unity and Unreal Engine to turn game ideas into reality. They program character movements, physics, user interfaces, and all technical systems that make the game playable and perform smoothly.",
+            "difficultyLevel": "Intermediate",
+            "estimatedDuration": 150,
+            "subCategoryId": 3
+        },
+        {
+            "trackId": 8,
+            "trackName": "Data analysis",
+            "description": "You examine data to find patterns and help make decisions.(Example: Analyzing sales to find the best-selling product)",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 4
+        },
+        {
+            "trackId": 9,
+            "trackName": "Data Engineer",
+            "description": "You build and manage the pipelines that collect, move, and store data.(You build the highways that data travels on)",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 4
+        },
+        {
+            "trackId": 10,
+            "trackName": "Machine Learning",
+            "description": "Building models that automatically learn from historical data.Applying algorithms like decision trees and regression.Used for predicting outcomes and automatic data classification",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 5
+        },
+        {
+            "trackId": 11,
+            "trackName": "Deep Learning",
+            "description": "Using complex neural networks for advanced intelligent tasks.Suitable for images, text, and audio with high accuracy.Requires massive data and significant computing power",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 5
+        },
+        {
+            "trackId": 12,
+            "trackName": "AI Engineering",
+            "description": "Transforming models into real-world usable applications.Designing systems that can handle real users.Focuses on performance, speed, and reliability in production environments",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 5
+        },
+        {
+            "trackId": 13,
+            "trackName": "UI Design",
+            "description": "Designing the visual appearance of websites and applications.Choosing colors, fonts, icons, and arranging visual elements.Ensures the product is visually appealing and consistent",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 6
+        },
+        {
+            "trackId": 14,
+            "trackName": "Ux Design",
+            "description": "Designing the overall user experience and interaction flow.Focuses on making products easy and intuitive to use.Resolves user problems and meets their needs effectively",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 6
+        },
+        {
+            "trackId": 15,
+            "trackName": "DevOps Engineering",
+            "description": "DevOps is a cultural and professional movement that combines software Development (Dev) and IT Operations (Ops). The core goal is to shorten the software development lifecycle and provide continuous delivery with high software quality. It's about breaking down the traditional silos between development teams (who write the code) and operations teams (who deploy and maintain it).",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 7
+        },
+        {
+            "trackId": 16,
+            "trackName": "Network Security",
+            "description": "Protects network infrastructure from unauthorized access and attacks. Configures firewalls, intrusion detection systems, and monitors network traffic. Essential for securing organizational data flow.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 8
+        },
+        {
+            "trackId": 17,
+            "trackName": "Application Security",
+            "description": "Focuses on securing software applications from threats throughout their lifecycle. Identifies vulnerabilities in code and protects against attacks like SQL injection. Ensures apps are safe before deployment.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 8
+        },
+        {
+            "trackId": 18,
+            "trackName": "Systems Security",
+            "description": "Hardens operating systems and servers against attacks. Implements security patches, access controls, and system hardening techniques. Protects endpoints from malware and unauthorized access.",
+            "difficultyLevel": "Advanced",
+            "estimatedDuration": 220,
+            "subCategoryId": 8
+        }
+    ],
+    "errors": []
+}
+// Technologies
+{
+    "success": true,
+    "data": [
+        {
+            "technologyId": 1,
+            "technologyName": "React Developer",
+            "description": "A JavaScript library for building user interfaces",
+            "videoUrl": "https://www.youtube.com/watch?v=react",
+            "createdAt": "2025-11-08T21:17:20.8509648",
+            "trackId": 1
+        },
+        {
+            "technologyId": 2,
+            "technologyName": "Vue.js",
+            "description": "The Progressive JavaScript Framework",
+            "videoUrl": "https://www.youtube.com/watch?v=vue",
+            "createdAt": "2025-11-08T21:17:20.8510305",
+            "trackId": 1
+        },
+        {
+            "technologyId": 3,
+            "technologyName": "Angular",
+            "description": "Platform for building mobile and desktop web applications",
+            "videoUrl": "https://www.youtube.com/watch?v=angular",
+            "createdAt": "2025-11-08T21:17:20.8510309",
+            "trackId": 1
+        },
+        {
+            "technologyId": 4,
+            "technologyName": "Node.js Developer",
+            "description": "JavaScript with syntax for types",
+            "videoUrl": "https://www.youtube.com/watch?v=typescript",
+            "createdAt": "2025-11-08T21:17:20.8510312",
+            "trackId": 2
+        },
+        {
+            "technologyId": 5,
+            "technologyName": "Python Django Developer",
+            "description": "The React Framework for Production",
+            "videoUrl": "https://www.youtube.com/watch?v=nextjs",
+            "createdAt": "2025-11-08T21:17:20.8510316",
+            "trackId": 2
+        },
+        {
+            "technologyId": 6,
+            "technologyName": "Java Spring Developer",
+            "description": "JavaScript runtime built on Chrome's V8 engine",
+            "videoUrl": "https://www.youtube.com/watch?v=nodejs",
+            "createdAt": "2025-11-08T21:17:20.8510328",
+            "trackId": 2
+        },
+        {
+            "technologyId": 7,
+            "technologyName": ".NET Developer",
+            "description": "High-level Python web framework",
+            "videoUrl": "https://www.youtube.com/watch?v=django",
+            "createdAt": "2025-11-08T21:17:20.8510331",
+            "trackId": 2
+        },
+        {
+            "technologyId": 8,
+            "technologyName": "MERN Stack ",
+            "description": "Java-based framework for microservices",
+            "videoUrl": "https://www.youtube.com/watch?v=spring",
+            "createdAt": "2025-11-08T21:17:20.8510335",
+            "trackId": 3
+        },
+        {
+            "technologyId": 9,
+            "technologyName": "MEAN Stack",
+            "description": "Modern, fast web framework for building APIs with Python",
+            "videoUrl": "https://www.youtube.com/watch?v=fastapi",
+            "createdAt": "2025-11-08T21:17:20.8510338",
+            "trackId": 3
+        },
+        {
+            "technologyId": 10,
+            "technologyName": "Java",
+            "description": "Delightful JavaScript Testing Framework",
+            "videoUrl": "https://www.youtube.com/watch?v=jest",
+            "createdAt": "2025-11-08T21:17:20.8510488",
+            "trackId": 4
+        },
+        {
+            "technologyId": 11,
+            "technologyName": "Kotlin",
+            "description": "Browser automation framework",
+            "videoUrl": "https://www.youtube.com/watch?v=selenium",
+            "createdAt": "2025-11-08T21:17:20.8510491",
+            "trackId": 4
+        },
+        {
+            "technologyId": 12,
+            "technologyName": "Objective-C",
+            "description": "Fast, easy and reliable testing for anything that runs in a browser",
+            "videoUrl": "https://www.youtube.com/watch?v=cypress",
+            "createdAt": "2025-11-08T21:17:20.8510496",
+            "trackId": 5
+        },
+        {
+            "technologyId": 13,
+            "technologyName": "Swift",
+            "description": "Programming language for data science and ML",
+            "videoUrl": "https://www.youtube.com/watch?v=python",
+            "createdAt": "2025-11-08T21:17:20.8510499",
+            "trackId": 5
+        },
+        {
+            "technologyId": 14,
+            "technologyName": "Flutter Developer",
+            "description": "Data analysis and manipulation tool",
+            "videoUrl": "https://www.youtube.com/watch?v=pandas",
+            "createdAt": "2025-11-08T21:17:20.8510503",
+            "trackId": 6
+        },
+        {
+            "technologyId": 15,
+            "technologyName": "React Native Developer",
+            "description": "Fundamental package for scientific computing",
+            "videoUrl": "https://www.youtube.com/watch?v=numpy",
+            "createdAt": "2025-11-08T21:17:20.8510506",
+            "trackId": 6
+        },
+        {
+            "technologyId": 16,
+            "technologyName": "C#",
+            "description": "Visual analytics platform",
+            "videoUrl": "https://www.youtube.com/watch?v=tableau",
+            "createdAt": "2025-11-08T21:17:20.851051",
+            "trackId": 7
+        },
+        {
+            "technologyId": 17,
+            "technologyName": "C++",
+            "description": "End-to-end machine learning platform",
+            "videoUrl": "https://www.youtube.com/watch?v=tensorflow",
+            "createdAt": "2025-11-08T21:17:20.8510513",
+            "trackId": 7
+        },
+        {
+            "technologyId": 18,
+            "technologyName": "Data Analyst",
+            "description": "Machine learning framework",
+            "videoUrl": "https://www.youtube.com/watch?v=pytorch",
+            "createdAt": "2025-11-08T21:17:20.8510519",
+            "trackId": 8
+        },
+        {
+            "technologyId": 19,
+            "technologyName": "Business Analyst",
+            "description": "Machine learning library for Python",
+            "videoUrl": "https://www.youtube.com/watch?v=sklearn",
+            "createdAt": "2025-11-08T21:17:20.8510523",
+            "trackId": 8
+        },
+        {
+            "technologyId": 20,
+            "technologyName": "BI Analyst",
+            "description": "Deep learning API",
+            "videoUrl": "https://www.youtube.com/watch?v=keras",
+            "createdAt": "2025-11-08T21:17:20.8510526",
+            "trackId": 8
+        },
+        {
+            "technologyId": 21,
+            "technologyName": "Data Engineer",
+            "description": "Collaborative interface design tool",
+            "videoUrl": "https://www.youtube.com/watch?v=figma",
+            "createdAt": "2025-11-08T21:17:20.8510529",
+            "trackId": 9
+        },
+        {
+            "technologyId": 22,
+            "technologyName": "Big Data Engineer",
+            "description": "Design and prototype user experiences",
+            "videoUrl": "https://www.youtube.com/watch?v=adobexd",
+            "createdAt": "2025-11-08T21:17:20.8510532",
+            "trackId": 9
+        },
+        {
+            "technologyId": 23,
+            "technologyName": "Cloud Data Engineer",
+            "description": "Digital design toolkit",
+            "videoUrl": "https://www.youtube.com/watch?v=sketch",
+            "createdAt": "2025-11-08T21:17:20.8510536",
+            "trackId": 9
+        },
+        {
+            "technologyId": 24,
+            "technologyName": "Data Architect ",
+            "description": "Platform for developing, shipping, and running applications",
+            "videoUrl": "https://www.youtube.com/watch?v=docker",
+            "createdAt": "2025-11-08T21:17:20.8510539",
+            "trackId": 9
+        },
+        {
+            "technologyId": 25,
+            "technologyName": "Machine Learning",
+            "description": "Container orchestration platform",
+            "videoUrl": "https://www.youtube.com/watch?v=kubernetes",
+            "createdAt": "2025-11-08T21:17:20.8510542",
+            "trackId": 10
+        },
+        {
+            "technologyId": 26,
+            "technologyName": "Deep Learning",
+            "description": "Automation server for CI/CD",
+            "videoUrl": "https://www.youtube.com/watch?v=jenkins",
+            "createdAt": "2025-11-08T21:17:20.8510545",
+            "trackId": 11
+        },
+        {
+            "technologyId": 27,
+            "technologyName": "AI Engineering",
+            "description": "Amazon Web Services cloud platform",
+            "videoUrl": "https://www.youtube.com/watch?v=aws",
+            "createdAt": "2025-11-08T21:17:20.8510548",
+            "trackId": 12
+        },
+        {
+            "technologyId": 28,
+            "technologyName": "UI Design",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 13
+        },
+        {
+            "technologyId": 29,
+            "technologyName": "UX Design",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 14
+        },
+        {
+            "technologyId": 30,
+            "technologyName": "DevOps Engineer",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 15
+        },
+        {
+            "technologyId": 31,
+            "technologyName": "SRE",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 15
+        },
+        {
+            "technologyId": 32,
+            "technologyName": "Platform Engineer",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 15
+        },
+        {
+            "technologyId": 33,
+            "technologyName": "Cloud Engineer",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 15
+        },
+        {
+            "technologyId": 34,
+            "technologyName": "Network Security",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 16
+        },
+        {
+            "technologyId": 35,
+            "technologyName": "Application Security",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 17
+        },
+        {
+            "technologyId": 36,
+            "technologyName": "Systems Security",
+            "description": "Infrastructure as Code tool",
+            "videoUrl": "https://www.youtube.com/watch?v=terraform",
+            "createdAt": "2025-11-08T21:17:20.8510552",
+            "trackId": 18
+        }
+    ],
+    "errors": []
+}
