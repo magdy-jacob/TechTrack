@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import ErrorMessage from "../../../Components/ui/Error";
-import Loader from "../../../Components/ui/Loader";
+import ErrorMessage from "../../../components/ui/Error";
+import Loader from "../../../components/ui/Loader";
 
 const RoadmapLine = ({ displayTitle, error, loading, technologyId }) => {
   const [techSteps, setTechSteps] = useState([]);

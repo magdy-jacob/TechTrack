@@ -6,8 +6,8 @@ import SubTrackDetails from "./pages/Roadmap/TrackDetails/SubTrackDetails";
 import SubSubTrackDetails from "./pages/Roadmap/TrackDetails/SubSubTrackDetails";
 // import QuestionsList from './pages/Roadmap/TrackDetails/QuestionsList/QuestionsList';
 // import Reviews from './pages/Reviews/Reviews';
-import Nav from "./Components/layout/Nav.jsx";
-import Footer from "./Components/layout/Footer.jsx";
+import Nav from "./components/layout/Nav.jsx";
+import Footer from "./components/layout/Footer.jsx";
 import Companies from "./pages/Companies/Compmain.jsx";
 function App() {
   return (

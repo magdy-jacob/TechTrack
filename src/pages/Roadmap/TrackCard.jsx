@@ -1,6 +1,6 @@
 // src/Roadmap/TrackCard.jsx
 import React from "react";
-import { Btn } from "../../Components/ui/Btn";
+import { Btn } from "../../components/ui/Btn";
 
 const TrackCard = ({ title, desc, img, index }) => {
   return (

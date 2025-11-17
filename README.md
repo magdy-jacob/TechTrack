@@ -65,6 +65,9 @@ TechTrack/
 🧑‍💻 User authentication system
 🧾 Dynamic content from database or API
 
+
+
+
 ```
 TechTrack
 ├─ .eslintrc.json
@@ -98,7 +101,7 @@ TechTrack
 │  │     ├─ logo2.png
 │  │     ├─ Software.webp
 │  │     └─ Vector.png
-│  ├─ components
+│  ├─ Components
 │  │  ├─ layout
 │  │  │  ├─ Footer.jsx
 │  │  │  └─ Nav.jsx
@@ -151,4 +154,3 @@ TechTrack
 └─ vite.config.js
 
 ```
-

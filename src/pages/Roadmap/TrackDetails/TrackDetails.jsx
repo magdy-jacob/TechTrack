@@ -155,8 +155,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Loader from "../../../Components/ui/Loader";
-import ErrorMessage from "../../../Components/ui/Error";
+import Loader from "../../../components/ui/Loader";
+import ErrorMessage from "../../../components/ui/Error";
 import { useApi } from "../../../context/ApiContext";
 
 export default function CategoryPage() {

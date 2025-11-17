@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useApi } from "../../../../context/ApiContext";
-import Loader from "../../../../Components/ui/Loader";
-import ErrorMessage from "../../../../Components/ui/Error";
+import Loader from "../../../../components/ui/Loader";
+import ErrorMessage from "../../../../components/ui/Error";
 
 const QuestionsList = ({
   technologyId,

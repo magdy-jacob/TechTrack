@@ -1,5 +1,5 @@
 import React from "react";
-import Info from "../../../Components/ui/Info";
+import Info from "../../../components/ui/Info";
 import Circles from "./Circles";
 import { useTranslation } from "react-i18next";
 

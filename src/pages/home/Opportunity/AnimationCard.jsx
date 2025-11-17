@@ -1,7 +1,7 @@
 // src/components/AnimationCard.jsx
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Card from "../../../Components/ui/Card";
+import Card from "../../../components/ui/Card";
 
 const AnimationCard = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1025);
